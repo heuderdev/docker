@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  dlna:
+    image: vladgh/minidlna
+    container_name: minidlna
+    restart: always
+    volumes:
+      - /minidlna:/media
+    network_mode: host
+    environment:
+      MINIDLNA_MEDIA_DIR: /media
+      MINIDLNA_FRIENDLY_NAME: pc
+      MINIDLNA_INOTIFY: yes
+    ports:
+      - "8200:8200"
+      - "1900:1900"

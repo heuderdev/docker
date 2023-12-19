@@ -1,0 +1,1 @@
+docker run --name minidlna -d -m 2048M --cpus=2 -p 8200:8200 -p 1900:1900/udp --net=bridge  -v /minidlna:/media/movies -e MINIDLNA_MEDIA_DIR=/media  -e MINIDLNA_FRIENDLY_NAME=FLIX  vladgh/minidlna

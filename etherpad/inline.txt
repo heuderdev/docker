@@ -1,0 +1,1 @@
+docker run -d -m 1024M --cpus=1  --name etherpad_2 -p 94:9001  -e 'DB_TYPE=postgres'  -e 'DB_HOST=192.168.0.111'  -e 'DB_PORT=5433'  -e 'DB_NAME=etherpad'  -e 'DB_USER=postgres'  -e 'DB_PASS=docker'  -e 'ADMIN_PASSWORD=docker' etherpad/etherpad
