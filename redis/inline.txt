@@ -1,0 +1,1 @@
+docker run -d --restart=unless-stopped -m 1024M --cpus=1  --name redis -v /volumes/redis/:/data redis-stack  -e REDIS_ARGS="--save 60 1000 --appendonly yes" -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
